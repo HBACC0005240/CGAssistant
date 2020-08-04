@@ -4,6 +4,7 @@
 #include "ui_MLAssistant.h"
 #include "psworker.h"
 #include <QMainWindow>
+#include "mainwindow.h"
 class MLAssistant : public QWidget
 {
 	Q_OBJECT
@@ -28,5 +29,5 @@ public slots:
 private:
 	Ui::MLAssistantClass ui;
 	QMap<DWORD, int> m_processForPort;	//进程id和通信端口 注入成功后，有个通信端口
-	QMap<DWORD, QMainWindow*> m_processForMainWindow;
+	QMap<DWORD, MainWindow*> m_processForMainWindow;
 };

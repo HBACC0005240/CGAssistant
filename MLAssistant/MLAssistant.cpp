@@ -115,6 +115,17 @@ void MLAssistant::OnNotifyQueryProcess(CProcessItemList list)
 
 void MLAssistant::slotOnQueueAttachProcess(quint32 ProcessId, quint32 ThreadId, quint32 hWnd, QString dllPath)
 {
-	MainWindow* pGameWnd = new MainWindow;
-	pGameWnd->show();
+	if (m_processForMainWindow.contains(ProcessId))
+	{
+		MainWindow* pGameWnd = m_processForMainWindow.value(ProcessId);
+		pGameWnd->show();
+	}
+	else
+	{
+		MainWindow* pGameWnd = new MainWindow;
+		pGameWnd->OnQueueAttachProcess(ProcessId, ThreadId, hWnd, dllPath);
+		pGameWnd->show();
+		m_processForMainWindow.insert(ProcessId, pGameWnd);
+	}
+
 }

@@ -195,6 +195,9 @@
   <ItemGroup>
     <None Include="CGAssistant.pro" />
     <None Include="lang.qm" />
+    <None Include="lang.ts">
+      <Filter>Translation Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CGAssistant.rc" />

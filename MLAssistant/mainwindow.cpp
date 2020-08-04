@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 	g_CGAInterface = CGA::CreateInterface();
-    auto playerWorker = new CPlayerWorker();
+    auto playerWorker = new CPlayerWorker(this);
     playerWorker->moveToThread(&m_playerWorkerThread);
     connect(&m_playerWorkerThread, SIGNAL(finished()), playerWorker, SLOT(deleteLater()));
 
@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(&m_processWorkerThread, SIGNAL(finished()), processWorker, SLOT(deleteLater()));
 
     auto battleWorker = new CBattleWorker();
+	battleWorker->g_CGAInterface = g_CGAInterface;
     battleWorker->moveToThread(&m_battleWorkerThread);
     connect(&m_battleWorkerThread, SIGNAL(finished()), battleWorker, SLOT(deleteLater()));
 
