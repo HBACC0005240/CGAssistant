@@ -12,6 +12,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGALib", "CGALib\CGALib.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGAssistant", "CGAssistant\CGAssistant.vcxproj", "{74C8E26A-259F-31D8-BBC6-5976B698BC79}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CGAHookQt", "cgahookQt\cgahookQt.vcxproj", "{740C1639-F2FD-4828-B379-CD7F28D7463F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MLAssist", "MLAssist\MLAssist.vcxproj", "{25130E9D-B735-4EF4-A656-60F7F7D18067}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MLAssistant", "MLAssistant\MLAssistant.vcxproj", "{7E385C12-86CE-4E04-8058-707FA1C22027}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -40,12 +46,32 @@ Global
 		{74C8E26A-259F-31D8-BBC6-5976B698BC79}.Release|x64.ActiveCfg = Release|Win32
 		{74C8E26A-259F-31D8-BBC6-5976B698BC79}.Release|x86.ActiveCfg = Release|Win32
 		{74C8E26A-259F-31D8-BBC6-5976B698BC79}.Release|x86.Build.0 = Release|Win32
+		{740C1639-F2FD-4828-B379-CD7F28D7463F}.Debug|x64.ActiveCfg = Debug|Win32
+		{740C1639-F2FD-4828-B379-CD7F28D7463F}.Debug|x86.ActiveCfg = Debug|Win32
+		{740C1639-F2FD-4828-B379-CD7F28D7463F}.Debug|x86.Build.0 = Debug|Win32
+		{740C1639-F2FD-4828-B379-CD7F28D7463F}.Release|x64.ActiveCfg = Release|Win32
+		{740C1639-F2FD-4828-B379-CD7F28D7463F}.Release|x86.ActiveCfg = Release|Win32
+		{740C1639-F2FD-4828-B379-CD7F28D7463F}.Release|x86.Build.0 = Release|Win32
+		{25130E9D-B735-4EF4-A656-60F7F7D18067}.Debug|x64.ActiveCfg = Debug|x64
+		{25130E9D-B735-4EF4-A656-60F7F7D18067}.Debug|x64.Build.0 = Debug|x64
+		{25130E9D-B735-4EF4-A656-60F7F7D18067}.Debug|x86.ActiveCfg = Debug|Win32
+		{25130E9D-B735-4EF4-A656-60F7F7D18067}.Debug|x86.Build.0 = Debug|Win32
+		{25130E9D-B735-4EF4-A656-60F7F7D18067}.Release|x64.ActiveCfg = Release|x64
+		{25130E9D-B735-4EF4-A656-60F7F7D18067}.Release|x64.Build.0 = Release|x64
+		{25130E9D-B735-4EF4-A656-60F7F7D18067}.Release|x86.ActiveCfg = Release|Win32
+		{25130E9D-B735-4EF4-A656-60F7F7D18067}.Release|x86.Build.0 = Release|Win32
+		{7E385C12-86CE-4E04-8058-707FA1C22027}.Debug|x64.ActiveCfg = Debug|Win32
+		{7E385C12-86CE-4E04-8058-707FA1C22027}.Debug|x86.ActiveCfg = Debug|Win32
+		{7E385C12-86CE-4E04-8058-707FA1C22027}.Debug|x86.Build.0 = Debug|Win32
+		{7E385C12-86CE-4E04-8058-707FA1C22027}.Release|x64.ActiveCfg = Release|Win32
+		{7E385C12-86CE-4E04-8058-707FA1C22027}.Release|x86.ActiveCfg = Release|Win32
+		{7E385C12-86CE-4E04-8058-707FA1C22027}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = 5.14.2-msvc2017
 		SolutionGuid = {0EECE82D-A01A-4BB1-BAC8-82E7A2E6B666}
-		Qt5Version = Qt5.7.0 32
 	EndGlobalSection
 EndGlobal

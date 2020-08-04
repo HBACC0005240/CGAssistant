@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MLAssistant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="psworker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="accountform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="autobattleform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="battle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="battlesetting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itemdropper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itemform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="itemtweaker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mapform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mylistview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mypaintmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mywebview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playerform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="processform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="processtable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MLAssistant.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="psworker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="accountform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="autobattleform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="battle.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="battlesetting.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="itemdropper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="itemform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="itemtweaker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mapform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mylistview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="player.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="playerform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="processform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="processtable.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="scriptform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="MLAssistant.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="accountform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="autobattleform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="itemform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mapform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="playerform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="processform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="scriptform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="MLAssistant.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="resource.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MINT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mypaintmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mywebview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CGAssistant.pro" />
+    <None Include="lang.qm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CGAssistant.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="logo.png" />
+    <Image Include="PUK3.ico" />
+  </ItemGroup>
+</Project>

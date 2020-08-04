@@ -158,7 +158,7 @@ DWORD WINAPI CGAServerThread(LPVOID)
 		{
 			CGA_CreateSharedData(port);
 
-			try
+			/*try
 			{
 				server = std::make_shared<server_t>(port, pool_size, std::chrono::seconds{ 15 });
 
@@ -289,7 +289,7 @@ DWORD WINAPI CGAServerThread(LPVOID)
 				{
 					break;
 				}
-			}
+			}*/
 		}
 	}
 

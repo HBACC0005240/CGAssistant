@@ -4,6 +4,7 @@
 #include <QSharedPointer>
 #include <QTimer>
 #include <Windows.h>
+#include "../CGALib/gameinterface.h"
 
 class CProcessItem
 {
@@ -64,7 +65,7 @@ private:
 private:
     HANDLE m_AttachMutex;
     HWND m_AttachHwnd;
-
+	CGA::CGAInterface * g_CGAInterface;
     quint32 m_AutoAttachPID;
     quint32 m_AutoAttachTID;
     double m_LastGameAnimTick;

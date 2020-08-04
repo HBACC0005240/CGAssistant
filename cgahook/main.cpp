@@ -1,7 +1,6 @@
 #include <Windows.h>
 #include <stdlib.h>
 #include "gameservice.h"
-
 DWORD WINAPI CGAServerThread(LPVOID);
 LRESULT CALLBACK NewWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
 LONG WINAPI MinidumpCallback(EXCEPTION_POINTERS* pException);
@@ -246,6 +245,9 @@ LRESULT CALLBACK NewWndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 		case VK_F4:
 			g_CGAService.AddAllTradeItems();
 			return 1;
+		case VK_HOME:
+			//g_CGAService.
+			return 1;
 		}
 	}
 
@@ -314,7 +316,23 @@ void InitializeHooks(int ThreadId, HWND hWnd, CGA::game_type type)
 		g_hServreThread = CreateThread(NULL, 0, CGAServerThread, NULL, 0, NULL);
 	}
 }
+void InitializeHookCustom(int ThreadId, HWND hWnd, CGA::game_type type)
+{
+	g_MainThreadId = ThreadId;
+	g_MainHwnd = hWnd;
 
+	SetUnhandledExceptionFilter(MinidumpCallback);
+
+	//g_CGAService.Initialize(type);
+
+	if (hWnd)
+	{
+		g_OldProc = (WNDPROC)GetWindowLongPtrA(hWnd, GWL_WNDPROC);
+		SetWindowLongPtrA(hWnd, GWL_WNDPROC, (LONG_PTR)(type == CGA::game_type::polcn ? NewWndProcPOLCN : NewWndProc));
+
+		g_hServreThread = CreateThread(NULL, 0, CGAServerThread, NULL, 0, NULL);
+	}
+}
 extern "C"
 {
 	__declspec(dllexport) LRESULT WINAPI GetMsgProc(int Code, WPARAM wParam, LPARAM lParam)
@@ -339,15 +357,20 @@ extern "C"
 				else if (!_wcsicmp(pModuleName, L"POLCN_Launcher.exe"))
 				{
 					InitializeHooks(GetCurrentThreadId(), pMsg->hwnd, CGA::polcn);
-				}				
+				}
+				else if (!_wcsicmp(pModuleName, L"AsmManual.exe"))
+				{
+					InitializeHookCustom(GetCurrentThreadId(), pMsg->hwnd, CGA::cg_item_6000);
+				}
 			}
 		}
 		return CallNextHookEx(NULL, Code, wParam, lParam);
 	}
 }
 
-int WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved)
+int WINAPI DllMain(HINSTANCE hInstance, DWORD fdwReason, LPVOID lpReserved)
 {
+
 	if (fdwReason == DLL_PROCESS_ATTACH)
 	{
 		WCHAR szModulePath[MAX_PATH];

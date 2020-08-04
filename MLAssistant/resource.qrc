@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>PUK3.ico</file>
+        <file>lang.qm</file>
+        <file>logo.png</file>
+    </qresource>
+</RCC>

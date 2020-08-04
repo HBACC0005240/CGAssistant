@@ -70,7 +70,7 @@ private:
     double m_LastGameAnimTick;
     int m_AnimTickFreezeTime;
     int m_MaxFreezeTime;
-	std::map<DWORD, std::wstring> g_mlProcess;
 };
+extern CProcessWorker *g_pProcessWorker;
 
 #endif // PSWORKER_H

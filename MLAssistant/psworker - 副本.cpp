@@ -1,49 +1,14 @@
 #include <QTimer>
 #include "psworker.h"
 #include "../CGALib/gameinterface.h"
-#include <tlhelp32.h>
-#include <psapi.h> 
-#include <list>
-#include <tchar.h>
-#include <string>
-using namespace std;
-#pragma comment(lib,"shlwapi.lib")
-#pragma comment(lib,"Psapi.lib")
+
 #include "MINT.h"
 
 extern CGA::CGAInterface *g_CGAInterface;
 
 Q_DECLARE_METATYPE(CProcessItemList)
+extern CProcessWorker *g_pProcessWorker; //= new CProcessWorker(NULL);
 
-struct handle_data {
-	unsigned long process_id;
-	HWND best_handle;
-};
-BOOL IsMainWindow(HWND handle)
-{
-	return GetWindow(handle, GW_OWNER) == (HWND)0 && IsWindowVisible(handle);
-}
-
-BOOL CALLBACK  EnumWindowsCallback(HWND handle, LPARAM lParam)
-{
-	handle_data& data = *(handle_data*)lParam;
-	unsigned long process_id = 0;
-	GetWindowThreadProcessId(handle, &process_id);
-	if (data.process_id != process_id || !IsMainWindow(handle)) {
-		return TRUE;
-	}
-	data.best_handle = handle;
-	return FALSE;
-}
-
-HWND FindMainWindow(unsigned long process_id)
-{
-	handle_data data;
-	data.process_id = process_id;
-	data.best_handle = 0;
-	EnumWindows(EnumWindowsCallback, (LPARAM)&data);
-	return data.best_handle;
-}
 CRetryAttachProcessTimer::CRetryAttachProcessTimer(quint32 ProcessId, QObject *parent) : QTimer(parent)
 {
     m_ProcessId = ProcessId;
@@ -55,11 +20,11 @@ CProcessWorker::CProcessWorker(QObject *parent) : QObject(parent)
     qRegisterMetaType<CProcessItemList>("CProcessItemList");
 
     QTimer *timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(OnQueueQueryProcess()));
-    timer->start(500);
+   // connect(timer, SIGNAL(timeout()), this, SLOT(OnQueueQueryProcess()));//采用另一种方式 此处不再使用
+    //timer->start(500);
     connect(timer, SIGNAL(timeout()), this, SLOT(OnCheckFreezeProcess()));
     timer->start(1000);
-
+	
     m_AttachMutex = NULL;
     m_AttachHwnd = 0;
     m_AutoAttachPID = 0;
@@ -262,42 +227,19 @@ bool CProcessWorker::CreateAttachMutex(quint32 ProcessId)
     }
     return true;
 }
-void GetAllProcess(std::map<DWORD, std::wstring>& processInfo)
-{
-	PROCESSENTRY32 pe32;
-	pe32.dwSize = sizeof(PROCESSENTRY32);
-	HANDLE hProcessSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
-	if (hProcessSnap == INVALID_HANDLE_VALUE)
-	{
-		//获取进程列表失败
-		return;
-	}
-	BOOL bMore = Process32First(hProcessSnap, &pe32);
-	while (bMore)
-	{
-		std::wstring exeName = pe32.szExeFile;
-		if (exeName.find(L"AsmManual.exe") != string::npos)//qfmoli
-		{
-			processInfo[pe32.th32ProcessID] = exeName;
-		}
-		bMore = Process32Next(hProcessSnap, &pe32);
-	}
-	CloseHandle(hProcessSnap);
-}
+
 void CProcessWorker::OnQueueQueryProcess()
 {
     CProcessItemList list;
 
-   // const wchar_t szFindGameClass[] = { 39764, 21147, 23453, 36125, 0 };
-	wchar_t szFindGameClass[100] = L"AsmManual";
+    const wchar_t szFindGameClass[] = { 39764, 21147, 23453, 36125, 0 };
+
     HWND hWnd = NULL;
     DWORD pid, tid;
     WCHAR szText[256];
-	GetAllProcess(g_mlProcess);
-//    while ((hWnd = FindWindowExW(NULL, hWnd, szFindGameClass, NULL)) != NULL)
-	for (auto it= g_mlProcess.begin();it!= g_mlProcess.end();++it)
-	{
-		hWnd=FindMainWindow(it->first);
+
+    while ((hWnd = FindWindowExW(NULL, hWnd, szFindGameClass, NULL)) != NULL)
+    {
         if((tid = GetWindowThreadProcessId(hWnd, (LPDWORD)&pid)) != 0 && pid != GetCurrentProcessId())
         {
             if(GetWindowTextW(hWnd, szText, 256))

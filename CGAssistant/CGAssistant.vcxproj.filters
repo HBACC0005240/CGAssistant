@@ -102,157 +102,97 @@
     <ClCompile Include="scriptform.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Debug\moc_autobattleform.cpp">
-      <Filter>Generated Files\Debug</Filter>
+    <ClCompile Include="accountform.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Release\moc_autobattleform.cpp">
-      <Filter>Generated Files\Release</Filter>
+    <ClCompile Include="itemtweaker.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Debug\moc_battle.cpp">
-      <Filter>Generated Files\Debug</Filter>
+    <ClCompile Include="mypaintmap.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Release\moc_battle.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_battlesetting.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_battlesetting.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_itemdropper.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_itemdropper.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_itemform.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_itemform.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_mainwindow.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_mainwindow.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_mylistview.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_mylistview.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_mywebview.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_mywebview.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_player.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_player.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_playerform.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_playerform.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_processform.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_processform.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_processtable.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_processtable.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_psworker.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_psworker.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc_scriptform.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc_scriptform.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_resource.cpp">
-      <Filter>Generated Files</Filter>
+    <ClCompile Include="mapform.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="autobattleform.h">
+    <QtMoc Include="autobattleform.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="battle.h">
+    </QtMoc>
+    <QtMoc Include="battle.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="battlesetting.h">
+    </QtMoc>
+    <QtMoc Include="battlesetting.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="itemdropper.h">
+    </QtMoc>
+    <QtMoc Include="itemdropper.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="itemform.h">
+    </QtMoc>
+    <QtMoc Include="itemform.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="mainwindow.h">
+    </QtMoc>
+    <QtMoc Include="mainwindow.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="mylistview.h">
+    </QtMoc>
+    <QtMoc Include="mylistview.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <CustomBuild Include="mywebview.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="player.h">
+    <QtMoc Include="player.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="playerform.h">
+    </QtMoc>
+    <QtMoc Include="playerform.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="processform.h">
+    </QtMoc>
+    <QtMoc Include="processform.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="processtable.h">
+    </QtMoc>
+    <QtMoc Include="processtable.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="psworker.h">
+    </QtMoc>
+    <QtMoc Include="psworker.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="scriptform.h">
+    </QtMoc>
+    <QtMoc Include="scriptform.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
+    <QtUic Include="accountform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mapform.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="accountform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="itemtweaker.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mapform.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="autobattleform.ui">
+    <QtUic Include="autobattleform.ui">
       <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="itemform.ui">
+    </QtUic>
+    <QtUic Include="itemform.ui">
       <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="mainwindow.ui">
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
       <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="playerform.ui">
+    </QtUic>
+    <QtUic Include="playerform.ui">
       <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="processform.ui">
+    </QtUic>
+    <QtUic Include="processform.ui">
       <Filter>Form Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="scriptform.ui">
+    </QtUic>
+    <QtUic Include="scriptform.ui">
       <Filter>Form Files</Filter>
-    </CustomBuild>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <None Include="PUK3.ico">
@@ -279,9 +219,9 @@
     <None Include="devtools\bundled\inspector.js">
       <Filter>Resource Files</Filter>
     </None>
-    <CustomBuild Include="resource.qrc">
+    <QtRcc Include="resource.qrc">
       <Filter>Resource Files</Filter>
-    </CustomBuild>
+    </QtRcc>
     <None Include="devtools\bundled\Images\smallIcons.png">
       <Filter>Resource Files</Filter>
     </None>
@@ -305,23 +245,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GeneratedFiles\ui_autobattleform.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_itemform.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_mainwindow.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_playerform.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_processform.h">
-      <Filter>Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratedFiles\ui_scriptform.h">
-      <Filter>Generated Files</Filter>
+    <ClInclude Include="mypaintmap.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

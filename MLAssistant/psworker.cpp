@@ -1,6 +1,5 @@
 #include <QTimer>
 #include "psworker.h"
-#include "../CGALib/gameinterface.h"
 #include <tlhelp32.h>
 #include <psapi.h> 
 #include <list>
@@ -10,8 +9,8 @@ using namespace std;
 #pragma comment(lib,"shlwapi.lib")
 #pragma comment(lib,"Psapi.lib")
 #include "MINT.h"
+#include "mainwindow.h"
 
-extern CGA::CGAInterface *g_CGAInterface;
 
 Q_DECLARE_METATYPE(CProcessItemList)
 
@@ -53,7 +52,8 @@ CRetryAttachProcessTimer::CRetryAttachProcessTimer(quint32 ProcessId, QObject *p
 CProcessWorker::CProcessWorker(QObject *parent) : QObject(parent)
 {
     qRegisterMetaType<CProcessItemList>("CProcessItemList");
-
+	if (parent)
+		g_CGAInterface = ((MainWindow*)parent)->g_CGAInterface;
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(OnQueueQueryProcess()));
     timer->start(500);
