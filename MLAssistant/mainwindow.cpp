@@ -97,22 +97,32 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+	m_playerWorkerThread.quit();
+	m_playerWorkerThread.wait();
+	
+	m_processWorkerThread.quit();
+	//m_processWorkerThread.wait();
+	
+	m_battleWorkerThread.quit();
+	m_battleWorkerThread.wait();
+	
+	NotifyCloseWindow();
     delete ui;
 }
 
-void MainWindow::closeEvent(QCloseEvent *event)
-{
-    m_playerWorkerThread.quit();
-    m_playerWorkerThread.wait();
-
-    m_processWorkerThread.quit();
-    m_processWorkerThread.wait();
-
-    m_battleWorkerThread.quit();
-    m_battleWorkerThread.wait();
-
-    NotifyCloseWindow();
-}
+//void MainWindow::closeEvent(QCloseEvent *event)
+//{
+//    m_playerWorkerThread.quit();
+//    m_playerWorkerThread.wait();
+//
+//    m_processWorkerThread.quit();
+//    //m_processWorkerThread.wait();
+//
+//    m_battleWorkerThread.quit();
+//    m_battleWorkerThread.wait();
+//
+//    NotifyCloseWindow();
+//}
 
 void MainWindow::changeEvent(QEvent *event)
 {

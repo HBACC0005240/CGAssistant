@@ -44,9 +44,9 @@ LRESULT CALLBACK KeyboardHookProc(int nCode, WPARAM wParam, LPARAM lParam)
 			::GetCursorPos(&pi);
 			HWND hWnd = WindowFromPoint(pi);
 			//进行注入
-			if (!g_attachHwndList.contains(hWnd))
+		//	if (!g_attachHwndList.contains(hWnd))
 			{
-				g_attachHwndList.append(hWnd);
+		//		g_attachHwndList.append(hWnd);
 				//注入函数调用
 				DWORD pid, tid;
 				tid=GetWindowThreadProcessId(hWnd, (LPDWORD)&pid);
@@ -125,6 +125,7 @@ void MLAssistant::slotOnQueueAttachProcess(quint32 ProcessId, quint32 ThreadId, 
 		MainWindow* pGameWnd = new MainWindow;
 		pGameWnd->OnQueueAttachProcess(ProcessId, ThreadId, hWnd, dllPath);
 		pGameWnd->show();
+		g_attachHwndList.append((HWND)hWnd);
 		m_processForMainWindow.insert(ProcessId, pGameWnd);
 	}
 
